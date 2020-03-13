@@ -4,9 +4,6 @@ author: "sravani kaza"
 date: "3/13/2020"
 output: html_document
 ---
-
-
-
 ```{r}
 if(!file.exists('activity.csv')){
   unzip('activity.zip')
