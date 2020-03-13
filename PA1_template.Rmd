@@ -4,6 +4,9 @@ author: "sravani kaza"
 date: "3/13/2020"
 output: html_document
 ---
+
+
+
 ```{r}
 if(!file.exists('activity.csv')){
   unzip('activity.zip')
@@ -29,6 +32,9 @@ stepsMean
 ```{r}
 stepsMedian
 ```
+```{r}
+averages[which.max(averages$steps),]
+```
 
 ```{r}
 library(ggplot2)
@@ -41,9 +47,6 @@ ggplot(data=averages, aes(x=interval, y=steps)) +
   ggtitle("Time Series: average number of steps") +
   xlab("5-minute interval") +
   ylab("average number of steps taken")
-```
-```{r}
-averages[which.max(averages$steps),]
 ```
 ```{r}
 # copy of data frame
@@ -108,6 +111,7 @@ plot2 <- qplot(DFsteps2,
 # Plotting 2 plot in grid
 grid.arrange(plot1, plot2, ncol=2)
 ```
+
 
 
 
